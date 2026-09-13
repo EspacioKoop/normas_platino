@@ -51,8 +51,20 @@ class DocsTests(unittest.TestCase):
         readme = (ROOT / "README.md").read_text(encoding="utf-8")
         for source in ("AGENTS.md", "docs/COOPERACION_AUTONOMA.md", "docs/PLANIFICACION_Y_ENTREGAS.md",
                        "docs/AUTOMATIZACION.md", "templates/ADOPCION.md", "templates/ROADMAP.md",
-                       "templates/platino.json", "scripts/platino.py"):
+                       "templates/platino.json", "scripts/platino.py", "docs/FUENTE_DE_VERDAD.md"):
             self.assertIn(f"]({source})", readme)
+
+    def test_context_recovery_is_linked_from_operational_entrypoints(self):
+        target = ROOT / "docs/FUENTE_DE_VERDAD.md"
+        for relative in ("AGENTS.md", "docs/COOPERACION_AUTONOMA.md",
+                         "docs/PLANIFICACION_Y_ENTREGAS.md", "templates/ADOPCION.md"):
+            with self.subTest(path=relative):
+                path = ROOT / relative
+                links = re.findall(r"\[[^\]]*\]\(([^)]+)\)",
+                                   prose(path.read_text(encoding="utf-8")))
+                destinations = [(path.parent / unquote(urlsplit(link).path)).resolve()
+                                for link in links if not urlsplit(link).scheme]
+                self.assertIn(target, destinations)
 
     def test_workflow_has_no_write_or_privileged_event(self):
         workflow = (ROOT / ".github/workflows/validar.yml").read_text(encoding="utf-8")

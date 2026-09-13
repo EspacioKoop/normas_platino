@@ -4,6 +4,8 @@
 
 ## 1. Un plan y un registro por proyecto
 
+**GitHub es la fuente de verdad del proyecto**, no el historial de chat. Aplica la [norma de fuente de verdad y recuperación](FUENTE_DE_VERDAD.md): cada tarea conserva en su issue el estado y un relevo recuperable, con evidencias y siguiente paso. Esta obligación acompaña todo el ciclo, no sólo las pausas.
+
 El **plan maestro** contiene objetivo, prioridades ordenadas, dependencias, criterios de aceptación, responsables, estado integrado/pendiente y último SHA completamente validado con enlaces a pruebas. HEAD no significa automáticamente checkpoint verde. Sólo marca terminado lo integrado y verificado; separa límites y defectos conocidos.
 
 El **registro único de reservas** conserva mediante comentarios nuevos CLAIM, acuerdos, bloqueos, pausas, PR_READY y RELEASE. Sus resúmenes ayudan, pero no sustituyen el historial completo. Issue asignado, rama existente o encargo en chat no equivalen a reserva. Los issues de tarea describen alcance, exclusiones y aceptación; los PR contienen cambios y evidencia. La coordinación mantiene el plan sin crear una segunda autoridad contradictoria.
@@ -124,9 +126,12 @@ Después, lee el PR remoto y la rama base: verifica estado fusionado, commit y p
 
 Toda interrupción deja un checkpoint recuperable: issue, agente, reserva, rama/PR, estado, último SHA publicado, cambios locales no publicados, pruebas, bloqueos y próximos pasos. Si no existe commit, escribe `sha=none` y explica la ausencia; no inventes un SHA.
 
+El estado de la tarea sigue el [checkpoint mínimo](FUENTE_DE_VERDAD.md#checkpoint-mínimo-de-tarea) en su issue canónico; el evento del registro enlaza esa actualización sin crear otro historial de progreso contradictorio. Tras pérdida de contexto, aplica la rutina de recuperación de esa misma guía antes de reanudar.
+
 ```text
 PAUSE issue=#N agent=<nombre> branch=<rama> claim=<URL> sha=<SHA publicado> state=<estado> next=<pasos concretos> reservation=retained
 PR: <URL o ninguno>
+Checkpoint de tarea: <URL con lo hecho, en curso, pendiente y decisiones>
 Pruebas/evidencia: <resultado y enlaces>
 Cambios no publicados: <detalle saneado o ninguno>
 Bloqueo y condición de vuelta: <detalle>

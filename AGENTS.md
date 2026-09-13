@@ -6,6 +6,12 @@ Lee [README.md](README.md), la [guía de cooperación](docs/COOPERACION_AUTONOMA
 
 Este repositorio mantiene reglas comunitarias y herramientas opcionales de adopción. Conserva lo existente, usa español de España y ejemplos adaptables. No conviertas Atlas, motores, personas ni contratos de los juegos de referencia en obligaciones generales. El README debe permitir encontrar todas las fuentes y adaptar las normas sin memoria de chat. Para cambiar la herramienta, lee también [AUTOMATIZACION.md](docs/AUTOMATIZACION.md).
 
+## GitHub como fuente de verdad
+
+**Los repositorios de GitHub son la fuente de toda la verdad del proyecto.** Lee y aplica la [norma de fuente de verdad y recuperación](docs/FUENTE_DE_VERDAD.md). Chat, memoria de IA y notas locales no sustituyen código publicado, decisiones, issues, reservas, PR y evidencia remota.
+
+Mantén en el issue canónico un checkpoint con lo hecho, lo que sigue en curso, lo terminado, pendientes, bloqueos, decisiones, rama/SHA/PR, evidencia, reserva y siguiente paso. Actualízalo tras cada avance significativo y antes de pausar, relevar o terminar; enlázalo desde plan y registro cuando corresponda, sin duplicar autoridades. Si se pierde contexto, reconstruye y contrasta el estado desde esas fuentes antes de editar. No inventes avances ni repitas trabajo por falta de memoria. Esta obligación no amplía permisos ni autoriza publicar información privada.
+
 ## Ciclo obligatorio
 
 1. Comprueba rama, checkout, cambios locales, plan, reservas y PR existentes. Elige el pendiente prioritario libre dentro del alcance autorizado.
