@@ -4,11 +4,14 @@
 
 ## Una fuente para cada pregunta
 
+**Los repositorios de GitHub son la fuente de toda la verdad del proyecto.** La [norma de fuente de verdad y recuperación](FUENTE_DE_VERDAD.md) exige mantener el estado recuperable sin memoria de chat, con una fuente canónica por dato y sin rebajar privacidad, autorización ni aceptación.
+
 | Pregunta | Fuente canónica | No equivale a |
 | --- | --- | --- |
 | ¿Qué va primero ahora? | Plan maestro | Permiso para saltarse controles |
 | ¿Quién puede editar qué? | Registro único de reservas | Un assignee o una tarjeta de Project |
 | ¿Qué debe cumplir una tarea? | Issue y sus decisiones registradas | Una lista abreviada del README |
+| ¿Dónde quedó el trabajo y cómo se retoma? | Checkpoint vigente del issue, contrastado con PR, commits, evidencia y reservas | Memoria del agente o último mensaje del chat |
 | ¿Qué fases y exclusiones tiene el producto? | ROADMAP del proyecto | Una segunda cola diaria |
 | ¿Qué alcance está comprometido para una entrega? | Milestone y sus issues | Un porcentaje de calidad |
 | ¿En qué estado operativo está cada elemento? | Project, cuando se adopte | Autoridad de merge o de reservas |

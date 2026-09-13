@@ -12,6 +12,7 @@ Plantilla: copiar y adaptar por PR, sin sustituir instrucciones existentes. Los 
 | Revisión de adopción | `<fecha, responsable y PR de adaptación>` |
 | Plan maestro | `<URL del issue de ESTE repositorio>` |
 | Registro único de reservas | `<URL del issue de ESTE repositorio>` |
+| Checkpoints de tarea | `<issues canónicos; responsable y rutina de actualización>` |
 | Roadmap | `<ruta y responsable de mantenerla>` |
 | Rama base y convención de ramas | `<valores reales>` |
 | Coordinación y límites de autoridad | `<responsable, alcance y registro de decisiones>` |
@@ -48,6 +49,8 @@ No aplicable: `<motivo si no se usan Projects>`. Permisos/automatizaciones autor
 No copiar las peculiaridades de otro proyecto como si fueran nuestras. Si aún no hay incidencias documentadas, indicarlo sin inventar ejemplos reales.
 
 ## Rutina de arranque y actualización
+
+GitHub es la fuente de verdad del proyecto. El AGENTS local adopta la [norma de fuente de verdad y recuperación](../docs/FUENTE_DE_VERDAD.md): estado, decisiones, trabajo hecho/en curso/pendiente, bloqueos, artefactos, evidencia y siguiente paso quedan en el issue canónico al avanzar, pausar, relevar y cerrar. Tras pérdida de contexto se contrastan esos checkpoints con el estado remoto y las reservas antes de editar; el chat no sustituye ese registro. No se publican datos privados para facilitar el relevo.
 
 El AGENTS local exige leer las instrucciones, normas adoptadas, plan, reservas e issue con comentarios antes de editar. Registra la revisión usada con el CLAIM o checkpoint cuando cambie. Consulta las novedades centrales al iniciar una sesión con acceso y propón su adaptación mediante PR, conservando reglas locales y excepciones justificadas. Sin acceso, declara qué revisión local usas y qué no se pudo contrastar.
 

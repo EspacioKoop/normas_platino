@@ -6,11 +6,19 @@ Este repositorio contiene un protocolo reutilizable: los agentes eligen trabajo 
 
 Incluye también planificación de versiones, criterios de publicación y una herramienta opcional para sincronizar milestones con vista previa. No es un coordinador permanente ni un permiso para modificar todos los repositorios de una organización.
 
+## GitHub es la fuente de verdad
+
+**Los repositorios de GitHub son la fuente de toda la verdad del proyecto.** Deben permitir recuperar qué está hecho, qué se estaba haciendo, qué se terminó, qué queda pendiente y por dónde continuar, aunque se pierda todo el contexto del chat.
+
+Las decisiones, avances, bloqueos y próximos pasos quedan en sus fuentes canónicas, con enlaces a ramas, commits, PR y evidencia. Los chats, memorias de IA y notas locales son apoyo, no un registro alternativo. Cada tarea deja un checkpoint actualizado al avanzar, pausar, relevar y cerrar, sin publicar información privada ni confundir un candidato con una entrega terminada.
+
+La [norma de fuente de verdad y recuperación](docs/FUENTE_DE_VERDAD.md) define dónde guardar cada dato, el checkpoint mínimo y cómo retomar el trabajo sin contexto previo.
+
 ## Empieza aquí
 
 1. Lee este README para conocer el mapa y la adaptación.
 2. Lee [AGENTS.md](AGENTS.md): instrucciones para contribuir **a este repositorio**.
-3. Consulta la [guía de cooperación](docs/COOPERACION_AUTONOMA.md) y las [normas de planificación y entrega](docs/PLANIFICACION_Y_ENTREGAS.md).
+3. Lee la [fuente de verdad y recuperación](docs/FUENTE_DE_VERDAD.md), la [guía de cooperación](docs/COOPERACION_AUTONOMA.md) y las [normas de planificación y entrega](docs/PLANIFICACION_Y_ENTREGAS.md).
 4. En el proyecto donde vayas a trabajar, localiza su plan maestro, registro único de reservas, instrucciones locales, roadmap y pruebas canónicas **antes de editar**.
 
 ## Mapa del repositorio
@@ -18,6 +26,7 @@ Incluye también planificación de versiones, criterios de publicación y una he
 | Fuente | Para qué sirve |
 | --- | --- |
 | [AGENTS.md](AGENTS.md) | Contrato operativo para contribuir aquí |
+| [Fuente de verdad y recuperación](docs/FUENTE_DE_VERDAD.md) | Estado canónico en GitHub, checkpoints y continuidad sin memoria de chat |
 | [Cooperación autónoma](docs/COOPERACION_AUTONOMA.md) | Reservas, estados, coordinación y plantillas de entrega |
 | [Planificación y entregas](docs/PLANIFICACION_Y_ENTREGAS.md) | Roadmap, milestones, Projects, releases y evidencia |
 | [Automatización](docs/AUTOMATIZACION.md) | Instalación, comandos, permisos y límites reales |
@@ -47,6 +56,7 @@ Instrucciones: <AGENTS.md y documentos locales>
 Normas adoptadas: <SHA completo, fecha de revisión y copia/enlace reproducible>
 Plan maestro: <URL canónica>
 Registro único de reservas: <URL canónica>
+Checkpoints de tarea: <issues canónicos; responsable y rutina de actualización>
 Roadmap: <ruta y alcance de cada fase>
 Coordinación: <responsable y límites de autoridad>
 Rama base: <rama protegida>
@@ -77,6 +87,7 @@ La herramienta crea milestones ausentes, actualiza metadatos gestionados por ell
 
 ## Reglas esenciales
 
+- GitHub es la fuente de verdad: conserva estado, decisiones, evidencia y siguiente paso en la tarea canónica; no dependas del chat para retomar.
 - Escoge el pendiente prioritario libre y reserva **antes** de editar.
 - Publica `CLAIM`, relee inmediatamente: gana la reserva activa anterior.
 - Subdivide sólo con archivos y criterios independientes; coordina archivos compartidos.
