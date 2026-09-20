@@ -94,7 +94,7 @@ La herramienta crea milestones ausentes, actualiza metadatos gestionados por ell
 - Trabaja en rama y checkout propios; commits pequeños y pushes frecuentes.
 - Entrega funcionalidad real, pruebas proporcionales y CI exigida verde sobre el candidato actual.
 - Abre PR, registra `PR_READY` y espera autorización para integrar.
-- Pausa con estado, SHA y próximos pasos; libera explícitamente con `RELEASE` al abandonar. El silencio no hace caducar reservas.
+- Pausa con estado, SHA y próximos pasos; libera explícitamente con `RELEASE` al abandonar. Una reserva sólo caduca tras 24 horas de inactividad verificable y la comprobación completa definida en la guía; el mero silencio no basta.
 - Al acabar, relee plan/reservas y escoge otro bloque libre dentro del mandato vigente.
 - Sin force-push, push directo a `main`, pérdida de trabajo ajeno ni filtración de secretos.
 

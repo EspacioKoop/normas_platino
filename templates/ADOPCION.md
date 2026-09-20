@@ -12,6 +12,8 @@ Plantilla: copiar y adaptar por PR, sin sustituir instrucciones existentes. Los 
 | Revisión de adopción | `<fecha, responsable y PR de adaptación>` |
 | Plan maestro | `<URL del issue de ESTE repositorio>` |
 | Registro único de reservas | `<URL del issue de ESTE repositorio>` |
+| Caducidad de reservas | `24 h sin actividad verificable; relectura completa y RELEASE reason=inactivity_expired, o adaptación local expresamente autorizada` |
+| Aviso de adopción y transición | `<fecha/enlace del aviso; reservas previas tienen 24 h para aportar checkpoint, salvo relevo explícito autorizado>` |
 | Checkpoints de tarea | `<issues canónicos; responsable y rutina de actualización>` |
 | Roadmap | `<ruta y responsable de mantenerla>` |
 | Rama base y convención de ramas | `<valores reales>` |
