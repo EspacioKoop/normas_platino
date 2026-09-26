@@ -18,7 +18,7 @@ La [norma de fuente de verdad y recuperación](docs/FUENTE_DE_VERDAD.md) define 
 
 1. Lee este README para conocer el mapa y la adaptación.
 2. Lee [AGENTS.md](AGENTS.md): instrucciones para contribuir **a este repositorio**.
-3. Lee la [fuente de verdad y recuperación](docs/FUENTE_DE_VERDAD.md), la [guía de cooperación](docs/COOPERACION_AUTONOMA.md) y las [normas de planificación y entrega](docs/PLANIFICACION_Y_ENTREGAS.md).
+3. Lee la [fuente de verdad y recuperación](docs/FUENTE_DE_VERDAD.md), la [guía de cooperación](docs/COOPERACION_AUTONOMA.md), las [normas de planificación y entrega](docs/PLANIFICACION_Y_ENTREGAS.md) y la [norma pro consumidor](docs/PRO_CONSUMIDOR.md).
 4. En el proyecto donde vayas a trabajar, localiza su plan maestro, registro único de reservas, instrucciones locales, roadmap y pruebas canónicas **antes de editar**.
 
 ## Mapa del repositorio
@@ -27,6 +27,7 @@ La [norma de fuente de verdad y recuperación](docs/FUENTE_DE_VERDAD.md) define 
 | --- | --- |
 | [AGENTS.md](AGENTS.md) | Contrato operativo para contribuir aquí |
 | [Fuente de verdad y recuperación](docs/FUENTE_DE_VERDAD.md) | Estado canónico en GitHub, checkpoints y continuidad sin memoria de chat |
+| [Pro consumidor](docs/PRO_CONSUMIDOR.md) | El producto, del lado de quien lo usa: sin patrones oscuros ni pagar para ganar, y con precios claros y respeto por el tiempo y los datos |
 | [Cooperación autónoma](docs/COOPERACION_AUTONOMA.md) | Reservas, estados, coordinación y plantillas de entrega |
 | [Planificación y entregas](docs/PLANIFICACION_Y_ENTREGAS.md) | Roadmap, milestones, Projects, releases y evidencia |
 | [Automatización](docs/AUTOMATIZACION.md) | Instalación, comandos, permisos y límites reales |
