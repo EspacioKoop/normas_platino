@@ -23,6 +23,24 @@ CLAIM issue=#N agent=<nombre> branch=agent/N-slug files=<rutas> goal=<objetivo>
 4. **Relee inmediatamente las reservas después de publicar y antes de editar.** Gana el CLAIM activo anterior por `created_at` de GitHub; si empatan, el ID de comentario menor. Conserva el enlace/ID como identidad de la reserva. Si la lectura falla o es incompleta, no des por adquirido el bloque.
 5. Si pierdes una colisión, no empieces: publica RELEASE y elige otro bloque, o acuerda una reducción y publica una reserva nueva sin solape. No borres ni edites el comentario antiguo para aparentar prioridad.
 
+### Caducidad por inactividad verificable
+
+Una reserva caduca cuando transcurren **24 horas completas sin actividad verificable dentro de su alcance**. El plazo se cuenta desde la última de estas señales comprobables: un checkpoint que enlace un artefacto, SHA o resultado nuevo pertinente, o un push relacionado con la reserva. Un ping, una declaración de presencia, repetir el estado sin evidencia o renovar el CLAIM con las mismas palabras no reinician el plazo. Si aún no existe actividad de trabajo, el inicio es el `created_at` del CLAIM original; las renovaciones vacías no lo desplazan. Justo antes de registrar la liberación se revalida que no apareció actividad nueva; si aparece, se aborta el relevo.
+
+La evaluación se hace al intentar tomar trabajo; este protocolo no crea daemon, cron ni liberación automática. Antes de declarar la caducidad, el agente autorizado para trabajar en el proyecto debe usar timestamps fiables de GitHub y releer completamente, incluida la paginación, el registro, el issue de la tarea y su checkpoint, y el PR y la rama relacionados. Debe confirmar que no existe un escritor activo según la evidencia del mismo dominio y dejar enlaces o identificadores de lo consultado. Un fallo de red, permisos, paginación o visibilidad, o la ausencia de una fuente que no pudo consultarse, **no prueba inactividad** y bloquea esta vía.
+
+Si se cumplen los criterios, ese agente puede publicar, sin pedir otro permiso rutinario:
+
+```text
+RELEASE issue=#N branch=<rama original> reason=inactivity_expired agent=<agente que verifica> original_holder=<titular original> claim=<URL> last_activity=<timestamp y evidencia> checked=<registro,issue,PR,rama> files=<alcance liberado> next=<relevo>
+```
+
+No borra ramas, commits, PR ni candidatos, ni edita comentarios históricos. Después relee el registro completo y publica un CLAIM nuevo; gana la reserva activa anterior por fecha de GitHub y, en empate, por ID de comentario menor. El titular que vuelva también relee y no reanuda la reserva liberada: compite mediante otro CLAIM.
+
+`PAUSE`, `WAITING_ON` y `PR_READY` no suspenden ni amplían las 24 horas. Sólo una excepción autorizada expresamente, con responsable y fecha/hora finita, sustituye temporalmente el plazo; al vencer vuelve a regir la norma general. No hay prórroga por silencio ni por declaraciones vacías.
+
+Al adoptar por primera vez esta revisión no se caducan reservas antiguas en masa: cada titular previo dispone de una ventana de 24 horas desde el aviso de adopción para publicar actividad verificable, salvo relevo explícito ya autorizado. La adopción y el inicio de esa ventana deben quedar registrados.
+
 Ejemplo concreto ilustrativo —sustituye los valores por los de tu proyecto—:
 
 ```text
@@ -137,7 +155,7 @@ Cambios no publicados: <detalle saneado o ninguno>
 Bloqueo y condición de vuelta: <detalle>
 ```
 
-**PAUSE y WAITING_ON conservan la reserva; no caduca por silencio ni por tiempo.** Antes de reanudar, relee plan, registro, issue, PR y remoto; comprueba que conservas titularidad y que nadie autorizó una transferencia. Comprueba checkout/SHA y cambios locales sin sobrescribirlos.
+**PAUSE y WAITING_ON conservan la reserva, pero no suspenden su posible caducidad tras 24 horas de inactividad verificada.** El silencio por sí solo no la libera. Antes de reanudar, relee plan, registro, issue, PR y remoto; comprueba que conservas titularidad, que no existe un `RELEASE reason=inactivity_expired` válido y que nadie autorizó una transferencia. Comprueba checkout/SHA y cambios locales sin sobrescribirlos.
 
 ```text
 RESUME issue=#N agent=<nombre> branch=<rama> claim=<URL> sha=<SHA comprobado> state=<estado> next=<siguiente paso> reservation=retained
@@ -151,7 +169,7 @@ Al abandonar, guarda el checkpoint y publica explícitamente:
 RELEASE issue=#N branch=<rama> reason=<motivo> agent=<nombre> claim=<URL> sha=<último SHA> files=<alcance liberado> next=<pasos para quien retome>
 ```
 
-RELEASE libera el alcance identificado, no borra commits ni cierra automáticamente issue/PR. Indica qué sucede con un PR abierto. Una transferencia necesita acuerdo registrado y nueva reserva del receptor; nadie toma archivos ajenos por falta de respuesta. Si el propietario no vuelve, la autoridad del proyecto debe resolver y registrar expresamente la reasignación; no se deduce del silencio.
+RELEASE libera el alcance identificado, no borra commits ni cierra automáticamente issue/PR. Indica qué sucede con un PR abierto. Una transferencia ordinaria necesita acuerdo registrado y nueva reserva del receptor; nadie toma archivos ajenos por mera falta de respuesta. La excepción es la caducidad por inactividad verificable descrita arriba: exige su comprobación y RELEASE, nunca se deduce sólo del silencio.
 
 ## 8. Cierre y siguiente bloque
 
@@ -169,4 +187,11 @@ No introduzcas credenciales en remotos, comandos públicos o archivos. Si detect
 
 De [AGENTS.md del remake](https://github.com/VaroTv7/espaciokooplagunakRemake/blob/main/AGENTS.md), su [plan #1](https://github.com/VaroTv7/espaciokooplagunakRemake/issues/1) y su [registro #7](https://github.com/VaroTv7/espaciokooplagunakRemake/issues/7) se heredan reserva pública previa, precedencia, independencia, coordinación, calidad y contexto recuperable.
 
-Aquí se explicitan pausa/reanudación, no caducidad por silencio, continuidad acotada y que PR_READY no libera. Los nombres, rutas, arquitectura y **Atlas/cosmografía** pertenecen al juego y no se exportan como normas comunitarias. Cada repositorio publica su propia ficha de adaptación enlazada desde README/AGENTS, preserva sus documentos y mantiene un solo registro por proyecto.
+Aquí se explicitan pausa/reanudación, caducidad únicamente tras 24 horas de inactividad verificable, continuidad acotada y que PR_READY no libera ni suspende el plazo. Los nombres, rutas, arquitectura y **Atlas/cosmografía** pertenecen al juego y no se exportan como normas comunitarias. Cada repositorio publica su propia ficha de adaptación enlazada desde README/AGENTS, preserva sus documentos y mantiene un solo registro por proyecto.
+
+## 11. Historial de la política de reservas
+
+- **Decisión anterior:** las reservas no caducaban por silencio ni por tiempo y una reasignación requería intervención expresa de la autoridad del proyecto.
+- **Decisión nueva:** una reserva caduca tras 24 horas sin actividad verificable en su alcance, pero sólo después de la relectura completa y el `RELEASE reason=inactivity_expired` documentados en esta guía.
+- **Motivo:** impedir bloqueos indefinidos sin convertir una ausencia aparente, una fuente inaccesible o un ping vacío en prueba de abandono.
+- **Fuente/autorización:** instrucción directa de Varo del 2026-09-20 para las normas generales de EspacioKoop; sustituye la regla anterior sin imponer contratos propios de un proyecto concreto.

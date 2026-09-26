@@ -36,9 +36,9 @@ Si una épica atraviesa versiones, divide tareas independientes y sitúa los hij
 
 Projects es opcional. Antes de automatizarlo, lee su propietario, identificador, permisos, campos y opciones reales. Registra en la ficha de adopción qué contenido entra, qué campo representa el estado y cómo se mapea cada transición. No hardcodees identificadores de otro proyecto ni supongas que existen `Todo`, `In Progress` o `Done`.
 
-Distingue el backlog de **issues** de la cola de entrega de **PR**: un PR con CI fallida, conflictos o pendiente de decisión no describe necesariamente el estado completo del issue. Una reserva pausada sigue vigente aunque la tarjeta esté bloqueada. `PR_READY` tampoco significa terminado. Un issue sólo pasa a terminado tras satisfacer toda su aceptación y verificar la integración correspondiente.
+Distingue el backlog de **issues** de la cola de entrega de **PR**: un PR con CI fallida, conflictos o pendiente de decisión no describe necesariamente el estado completo del issue. Una reserva pausada sigue vigente aunque la tarjeta esté bloqueada, salvo caducidad por inactividad verificable conforme a la [guía de cooperación](COOPERACION_AUTONOMA.md#caducidad-por-inactividad-verificable). `PR_READY` tampoco significa terminado ni suspende ese plazo. Un issue sólo pasa a terminado tras satisfacer toda su aceptación y verificar la integración correspondiente.
 
-Las automatizaciones nativas pueden reflejar hechos verificables como apertura o integración de un PR. No deben inferir aceptación funcional, playtesting, autorización de merge, caducidad de CLAIM ni publicación de una release. Si no hay acceso al Project, declara que su sincronización queda pendiente: no fabriques estados ni amplíes permisos.
+Las automatizaciones nativas pueden reflejar hechos verificables como apertura o integración de un PR. No deben inferir aceptación funcional, playtesting, autorización de merge, caducidad de CLAIM ni publicación de una release. La caducidad se evalúa al coger trabajo mediante relectura humana o del agente autorizado; no mediante cron o inferencia del Project. Si no hay acceso al Project, declara que su sincronización queda pendiente: no fabriques estados ni amplíes permisos.
 
 ## Publicación con evidencia
 

@@ -25,7 +25,7 @@ Mantén en el issue canónico un checkpoint con lo hecho, lo que sigue en curso,
 6. Ejecuta los controles de abajo. Ninguna afirmación de estado puede exceder la evidencia. La referencia de CI es la ejecución para el SHA candidato; no su definición ni un verde anterior.
 7. Abre PR hacia `main`, enlaza el issue y registra `PR_READY` en #2 con PR, SHA, pruebas y límites. No libera la reserva ni autoriza merge.
 8. Integra sólo con autorización explícita y controles satisfechos. Prohibidos force-push, reescritura compartida y push directo a `main`. La inicialización vacía autorizada y la autorización histórica del issue #3 no son excepciones reutilizables.
-9. Verifica el resultado remoto; actualiza el plan coordinadamente y publica `RELEASE`. Al abandonar, deja checkpoint antes de liberar. Al pausar, publica estado, SHA, próximos pasos y reserva explícita: no caduca por silencio.
+9. Verifica el resultado remoto; actualiza el plan coordinadamente y publica `RELEASE`. Al abandonar, deja checkpoint antes de liberar. Al pausar, publica estado, SHA, próximos pasos y reserva explícita. `PAUSE`, `WAITING_ON` y `PR_READY` retienen la reserva, pero no detienen su plazo: caduca tras 24 horas sin actividad verificable en el alcance conforme a la guía de cooperación; el mero silencio no basta para reasignar.
 10. Relee plan y reservas y selecciona otro bloque libre si el mandato sigue vigente. Si no hay trabajo autorizado, informa del cierre sin inventar tareas ni crear automatización persistente.
 
 ## Controles canónicos
@@ -52,6 +52,6 @@ Las pruebas son locales, sin red, y usan datos ficticios. Comprueban lógica, ne
 
 No publiques tokens, cookies, claves, contraseñas, datos personales, infraestructura privada ni información de otros dominios. Revisa también diffs, logs, capturas, adjuntos y descripciones de PR. Una autorización para este repositorio no permite modificar otros ni ampliar credenciales o permisos.
 
-La sincronización es opcional, explícita y limitada al destino validado. No añadas telemetría, servicios de IA, ejecución de comandos procedentes de issues, auto-merge, publicación de releases ni reasignación por silencio. No ejecutes código no revisado de PR con tokens de escritura ni utilices `pull_request_target` para probarlo. Un despliegue en otro repositorio requiere su propia adopción y autorización.
+La sincronización es opcional, explícita y limitada al destino validado. No añadas telemetría, servicios de IA, ejecución de comandos procedentes de issues, auto-merge, publicación de releases ni reasignación por mero silencio. Sólo cabe liberar por inactividad con la comprobación, evidencia y `RELEASE reason=inactivity_expired` exigidas por la guía de cooperación. No ejecutes código no revisado de PR con tokens de escritura ni utilices `pull_request_target` para probarlo. Un despliegue en otro repositorio requiere su propia adopción y autorización.
 
 El PR incluye alcance, documentos y código modificados, requisitos cumplidos, comprobaciones reales, limitaciones y reversión mediante otro PR. `Closes #N` sólo para cierre completo; `Refs #N` para entrega parcial. No cierres criterios por una intención, un placeholder o una revisión pendiente. Revertir el código no revierte automáticamente los metadatos que alguien haya sincronizado: inventaría cualquier efecto remoto.
