@@ -1,8 +1,11 @@
 # Norma pro consumidor
 
-**Un producto Platino está del lado de quien lo usa.** Antes de ganar dinero, gana confianza:
-se disfruta, se entiende, no engaña y no castiga a quien no paga más. Cuando dos objetivos
-chocan, gana el que beneficia a la persona que usa el producto.
+**Un producto Platino está del lado de quien lo usa, y es PRO DIVERSIÓN.** Antes de ganar
+dinero, gana confianza: se disfruta, se entiende, no engaña y no castiga a quien no paga más.
+Cuando dos objetivos chocan, gana el que beneficia a la persona que usa el producto.
+
+No es solo una regla de monetización: vale para **todo el producto**, desde el primer menú
+hasta el último secreto.
 
 Esta norma se adapta a cada proyecto (juego, aplicación o herramienta) con su ficha de
 adopción, y se revisa en cada entrega igual que las pruebas. Su registro sigue la
@@ -11,12 +14,18 @@ issues y PR, no en un chat.
 
 ## Principios
 
-1. **Diversión y utilidad primero.** El producto se diseña para disfrutarse, en compañía si es
-   social, y no para retener a la fuerza. La monetización, si existe, es secundaria y suave.
+1. **PRO DIVERSIÓN en todo.** El producto se diseña para disfrutarse, en compañía si es social,
+   y no para retener a la fuerza. Cada decisión (manejo, menús, ajustes, recompensas, secretos)
+   se mide por si lo hace más divertido. La monetización, si existe, es secundaria y suave.
 2. **Nada de pagar para ganar.** Ninguna compra da ventaja sobre otra persona ni acorta de forma
    injusta lo que los demás consiguen jugando o usando.
-3. **Se consigue usando.** El progreso y los extras se obtienen usando el producto, en tiempos
-   razonables y sin muros artificiales.
+3. **Se desbloquea jugando, con el espíritu clásico.** El progreso y los extras se consiguen
+   usando el producto, en tiempos razonables y sin muros artificiales:
+   - recompensas por jugar mucho y por dominar el juego (retos, récords, maestría);
+   - **secretos:** trucos clásicos (combinaciones, códigos), desbloqueables ocultos o raros que
+     den de qué hablar y huevos de pascua;
+   - lo raro es raro porque cuesta o porque hay que descubrirlo, **nunca** porque haya que
+     pagar o tener suerte con dinero.
 4. **Sin patrones oscuros.** Prohibidos:
    - cuentas atrás falsas y escasez inventada;
    - cajas de premio de pago o cualquier azar con dinero;
@@ -50,6 +59,9 @@ issues y PR, no en un chat.
 
 - [ ] Nadie obtiene ventaja pagando.
 - [ ] Todo lo que se puede conseguir se puede conseguir usando el producto, en un tiempo razonable.
+- [ ] Jugar mucho y jugar bien se recompensa, y hay algo que descubrir (secretos, trucos o
+      desbloqueables raros).
+- [ ] La entrega hace el producto más divertido, no solo más rentable.
 - [ ] No hay ningún patrón oscuro de los del principio 4.
 - [ ] Si hay precios, son claros, finales y visibles antes de pagar.
 - [ ] Se puede parar en cualquier momento sin perder progreso.
@@ -62,5 +74,7 @@ issues y PR, no en un chat.
 - **«Es solo estético».** Lo estético también puede manipular (exclusividad temporal, presión
   social). Se aplica igual la lista de comprobación.
 - **«Todos lo hacen».** Que un patrón sea común en el sector no lo hace pro consumidor.
+- **Desbloqueables que solo alargan.** Un desbloqueable que exige repetir lo mismo sin gracia
+  no es una recompensa: es relleno. Mejor pocos y con historia que muchos y vacíos.
 - **La monetización que llega al final.** Si se añade tarde, se revisa como cualquier otra
   entrega: no se cuela en un parche.
