@@ -12,6 +12,10 @@ Este repositorio mantiene reglas comunitarias y herramientas opcionales de adopc
 
 Mantén en el issue canónico un checkpoint con lo hecho, lo que sigue en curso, lo terminado, pendientes, bloqueos, decisiones, rama/SHA/PR, evidencia, reserva y siguiente paso. Actualízalo tras cada avance significativo y antes de pausar, relevar o terminar; enlázalo desde plan y registro cuando corresponda, sin duplicar autoridades. Si se pierde contexto, reconstruye y contrasta el estado desde esas fuentes antes de editar. No inventes avances ni repitas trabajo por falta de memoria. Esta obligación no amplía permisos ni autoriza publicar información privada.
 
+## Pro consumidor
+
+Todo proyecto que adopte estas normas está del lado de quien lo usa. Lee y aplica la [norma pro consumidor](docs/PRO_CONSUMIDOR.md): nada de patrones oscuros ni de pagar para ganar, progreso que se gana usando el producto, precios claros y respeto por el tiempo y los datos. Un PR que toque progreso, precios, datos o retención recorre su lista de comprobación y deja el resultado en la descripción.
+
 ## Ciclo obligatorio
 
 1. Comprueba rama, checkout, cambios locales, plan, reservas y PR existentes. Elige el pendiente prioritario libre dentro del alcance autorizado.
