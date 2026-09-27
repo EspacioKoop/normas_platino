@@ -21,7 +21,28 @@ CLAIM issue=#N agent=<nombre> branch=agent/N-slug files=<rutas> goal=<objetivo>
 ```
 
 4. **Relee inmediatamente las reservas después de publicar y antes de editar.** Gana el CLAIM activo anterior por `created_at` de GitHub; si empatan, el ID de comentario menor. Conserva el enlace/ID como identidad de la reserva. Si la lectura falla o es incompleta, no des por adquirido el bloque.
-5. Si pierdes una colisión, no empieces: publica RELEASE y elige otro bloque, o acuerda una reducción y publica una reserva nueva sin solape. No borres ni edites el comentario antiguo para aparentar prioridad.
+5. Si pierdes una colisión, no empieces a editar esos archivos: publica RELEASE y elige otro bloque, o acuerda una reducción y publica una reserva nueva sin solape. No borres ni edites el comentario antiguo para aparentar prioridad. Perder una colisión no te aparta del trabajo: puedes cooperar con el titular como indica el apartado siguiente.
+
+### La reserva no bloquea la cooperación
+
+Una reserva existe para que dos escritores no editen a la vez los mismos archivos. **No** es un derecho exclusivo sobre el issue, el tema ni la idea, y no autoriza a rechazar ayuda que no toque lo reservado.
+
+**Sin pedir permiso**, con un bloque reservado por otro agente, puedes:
+
+- revisar su PR o su rama y dejar comentarios, pruebas, dudas y hallazgos;
+- proponer cambios concretos como sugerencias de revisión, o como parche o commit exacto para que el titular lo aplique o lo transporte;
+- reservar con tu propio CLAIM y trabajar **rutas no reservadas** del mismo issue cuando sus criterios sean independientes (herramientas, pruebas nuevas, documentación, datos o investigación);
+- preparar prototipos o evidencia en rutas propias y ofrecérselos al titular.
+
+**Con acuerdo explícito del titular** registrado como `COORDINATION` (§3), también puedes editar archivos reservados en la secuencia acordada o compartir la reserva.
+
+**Sigue prohibido:**
+
+- editar o empujar en archivos o ramas reservados sin ese acuerdo;
+- abrir una implementación paralela del mismo sistema;
+- usar la cooperación para vaciar, sustituir o forzar la liberación de la reserva de otro.
+
+La reserva limita la edición, no la cooperación.
 
 ### Caducidad por inactividad verificable
 
@@ -195,3 +216,8 @@ Aquí se explicitan pausa/reanudación, caducidad únicamente tras 24 horas de i
 - **Decisión nueva:** una reserva caduca tras 24 horas sin actividad verificable en su alcance, pero sólo después de la relectura completa y el `RELEASE reason=inactivity_expired` documentados en esta guía.
 - **Motivo:** impedir bloqueos indefinidos sin convertir una ausencia aparente, una fuente inaccesible o un ping vacío en prueba de abandono.
 - **Fuente/autorización:** instrucción directa de Varo del 2026-09-20 para las normas generales de EspacioKoop; sustituye la regla anterior sin imponer contratos propios de un proyecto concreto.
+
+- **Decisión anterior (cooperación):** ante un solape había que no editar y buscar otro bloque, y se leía como si la reserva apartase a los demás del issue.
+- **Decisión nueva:** una reserva protege archivos, no bloquea la cooperación. Revisar, proponer, entregar parches al titular y trabajar en rutas libres del mismo issue no requieren permiso. Editar lo reservado sigue requiriendo `COORDINATION` con acuerdo del titular (§2, «La reserva no bloquea la cooperación»).
+- **Motivo:** que una reserva no deje a otros agentes sin poder aportar mientras el titular trabaja, sin reabrir las colisiones que la reserva evita.
+- **Fuente/autorización:** instrucción directa de Varo del 2026-09-27 («una reserva no bloquea la cooperación»).

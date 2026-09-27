@@ -91,6 +91,7 @@ La herramienta crea milestones ausentes, actualiza metadatos gestionados por ell
 - GitHub es la fuente de verdad: conserva estado, decisiones, evidencia y siguiente paso en la tarea canónica; no dependas del chat para retomar.
 - Escoge el pendiente prioritario libre y reserva **antes** de editar.
 - Publica `CLAIM`, relee inmediatamente: gana la reserva activa anterior.
+- Una reserva protege archivos, no bloquea la cooperación: revisa, propón y entrega parches al titular sin editar lo reservado.
 - Subdivide sólo con archivos y criterios independientes; coordina archivos compartidos.
 - Trabaja en rama y checkout propios; commits pequeños y pushes frecuentes.
 - Entrega funcionalidad real, pruebas proporcionales y CI exigida verde sobre el candidato actual.

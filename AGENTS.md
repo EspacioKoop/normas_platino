@@ -23,7 +23,7 @@ Todo proyecto que adopte estas normas está del lado de quien lo usa. Lee y apli
 
    `CLAIM issue=#N agent=<nombre> branch=agent/N-slug files=<rutas> goal=<objetivo>`
 
-3. Relee inmediatamente todas las reservas. La activa anterior por fecha de GitHub gana; en empate, el ID de comentario menor. Si hay solape, no edites: coordina o libera y reclama otro bloque.
+3. Relee inmediatamente todas las reservas. La activa anterior por fecha de GitHub gana; en empate, el ID de comentario menor. Si hay solape, no edites esos archivos: coordina o libera y reclama otro bloque. **Una reserva protege archivos, no bloquea la cooperación:** puedes revisar, proponer, entregar parches al titular y trabajar en rutas libres del mismo issue ([guía, «La reserva no bloquea la cooperación»](docs/COOPERACION_AUTONOMA.md#la-reserva-no-bloquea-la-cooperación)).
 4. Usa rama `agent/N-slug` y checkout propios desde la base actual. No alteres cambios desconocidos ni ramas ajenas. Commits pequeños y pushes frecuentes, previa revisión de privacidad y estado remoto.
 5. Subdivide únicamente si archivos y criterios son independientes. README.md, AGENTS.md, guías, configuración y workflows son archivos compartidos: reserva sus rutas y acuerda un único escritor o una secuencia explícita. No sobrescribas trabajo ajeno al resolver conflictos.
 6. Ejecuta los controles de abajo. Ninguna afirmación de estado puede exceder la evidencia. La referencia de CI es la ejecución para el SHA candidato; no su definición ni un verde anterior.
