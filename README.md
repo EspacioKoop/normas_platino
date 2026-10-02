@@ -30,6 +30,7 @@ La [norma de fuente de verdad y recuperación](docs/FUENTE_DE_VERDAD.md) define 
 | [Pro consumidor](docs/PRO_CONSUMIDOR.md) | El producto, del lado de quien lo usa: sin patrones oscuros ni pagar para ganar, y con precios claros y respeto por el tiempo y los datos |
 | [Cooperación autónoma](docs/COOPERACION_AUTONOMA.md) | Reservas, estados, coordinación y plantillas de entrega |
 | [Planificación y entregas](docs/PLANIFICACION_Y_ENTREGAS.md) | Roadmap, milestones, Projects, releases y evidencia |
+| [Auto-merge](docs/AUTO_MERGE.md) | Integración automática con puerta de calidad y revisión independiente, si el proyecto la adopta |
 | [Automatización](docs/AUTOMATIZACION.md) | Instalación, comandos, permisos y límites reales |
 | [Ficha de adopción](templates/ADOPCION.md) | Adaptación y revisión de normas por proyecto |
 | [Plantilla de roadmap](templates/ROADMAP.md) | Fases, dependencias y criterios de salida |
