@@ -19,6 +19,7 @@ Plantilla: copiar y adaptar por PR, sin sustituir instrucciones existentes. Los 
 | Rama base y convención de ramas | `<valores reales>` |
 | Coordinación y límites de autoridad | `<responsable, alcance y registro de decisiones>` |
 | Autoridad de merge | `<quién, condiciones y dónde registra la autorización>` |
+| Auto-merge | `<no adoptado | adoptado: fecha, quién lo autoriza y cita/enlace; ver docs/AUTO_MERGE.md>` |
 | Autoridad de publicación | `<quién, productos/canales y registro de aprobación>` |
 | Prioridad, dependencias y aceptación | `<regla y fuentes canónicas>` |
 | Archivos y metadatos compartidos | `<rutas, milestones, propietario y secuencia de edición>` |
