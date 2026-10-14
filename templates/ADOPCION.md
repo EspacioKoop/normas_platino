@@ -13,6 +13,7 @@ Plantilla: copiar y adaptar por PR, sin sustituir instrucciones existentes. Los 
 | Plan maestro | `<URL del issue de ESTE repositorio>` |
 | Registro único de reservas | `<URL del issue de ESTE repositorio>` |
 | Caducidad de reservas | `24 h sin actividad verificable; relectura completa y RELEASE reason=inactivity_expired, o adaptación local expresamente autorizada` |
+| Alcance de la reserva y cooperación | `<la reserva protege archivos, no da exclusividad sobre el issue/tema; permite revisar, proponer o trabajar rutas no reservadas sin permiso del titular; editar archivos reservados exige acuerdo explícito/COORDINATION o adaptación local equivalente; conservar reglas locales más estrictas si son deliberadas>` |
 | Aviso de adopción y transición | `<fecha/enlace del aviso; reservas previas tienen 24 h para aportar checkpoint, salvo relevo explícito autorizado>` |
 | Checkpoints de tarea | `<issues canónicos; responsable y rutina de actualización>` |
 | Roadmap | `<ruta y responsable de mantenerla>` |
